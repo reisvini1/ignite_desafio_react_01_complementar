@@ -1,5 +1,10 @@
-import { render } from 'react-dom'
+import { render } from "react-dom";
+import { WatchMeProvider } from "./contexts/WatchMeContext";
+import { App } from "./App";
 
-import { App } from './App'
-
-render(<App />, document.getElementById('root'))
+render(
+  <WatchMeProvider>
+    <App />
+  </WatchMeProvider>,
+  document.getElementById("root")
+);
